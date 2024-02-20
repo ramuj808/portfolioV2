@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import navIcon1 from "../../assets/email.png";
+import navIcon2 from "../../assets/linkedin.png";
+import navIcon3 from "../../assets/github-sign.png";
 
-const Navbar = () => {
+const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
@@ -74,13 +77,13 @@ const Navbar = () => {
           <span className="navbar-text">
             <div className="social-icon">
               <a href="#">
-                <img src={""} alt="" />
+                <img src={navIcon1} alt="Email Icon" />
               </a>
               <a href="#">
-                <img src={""} alt="" />
+                <img src={navIcon2} alt="LinkedIn" />
               </a>
               <a href="#">
-                <img src={""} alt="" />
+                <img src={navIcon3} alt="GitHub" />
               </a>
             </div>
             <button className="vvd" onClick={() => console.log("connect")}>
@@ -93,4 +96,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
